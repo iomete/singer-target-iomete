@@ -1,0 +1,13 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  target-singer:
+    image: singer-target-iomete
+    command: bash -c 'cat /data/data-v1.json | ./target/bin/singer-target-iomete -c /data/dev-iomete-config.json'
+    volumes:
+      - ./data:/data
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+volumes:
+  logvolume01: {}

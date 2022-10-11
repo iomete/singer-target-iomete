@@ -1,0 +1,21 @@
+{
+  "host": "eu-central-1.iomete.com",
+  "account_number": "0000000000000",
+  "lakehouse": "lakehouse",
+  "user": "username",
+  "password": "password",
+
+  "default_target_schema": "singer",
+
+  "add_metadata_columns": true,
+  "hard_delete": true,
+
+  "s3_bucket": "iom-lakehouse-0000000000000",
+  "s3_key_prefix": "external/singer/",
+
+  "primary_key_required": false,
+
+  "no_compression": false,
+
+  "temp_dir": "../tempdir"
+}
