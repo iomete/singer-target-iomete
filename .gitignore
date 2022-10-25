@@ -1,0 +1,4 @@
+.env
+sdist/
+.DS_Store
+.idea

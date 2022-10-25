@@ -60,6 +60,8 @@ Running the the target connector requires a `config.json` file. Example with the
   "add_metadata_columns": true,
   "hard_delete": true,
 
+  "aws_access_key_id": "key_id",
+  "aws_secret_access_key": "access_key",
   "s3_bucket": "iom-lakehouse-000000000000",
   "s3_key_prefix": "external/singer/",
 
@@ -103,7 +105,6 @@ Full list of options in `config.json`:
 | validate_records          | Boolean |            | (Default: False) Validate every single record message to the corresponding JSON schema. This option is disabled by default and invalid RECORD messages will fail only at load time by iomete. Enabling this option will detect invalid records earlier but could cause performance degradation.                                                                                                                                                                                                                                                                                                                                                                                |
 | temp_dir                  | String  |            | (Default: platform-dependent) Directory of temporary files with RECORD messages.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | no_compression?           | Boolean |            | (Default: False) Generate uncompressed files when loading to iomete. Normally, by default GZIP compressed files are generated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| query_tag                 | String  |            | (Default: None) Optional string to tag executed queries in iomete. Replaces tokens `{{database}}`, `{{schema}}` and `{{table}}` with the appropriate values. The tags are displayed in the output of the iomete `QUERY_HISTORY`, `QUERY_HISTORY_BY_*` functions.                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
 ## License
