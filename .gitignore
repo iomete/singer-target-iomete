@@ -2,3 +2,6 @@
 sdist/
 .DS_Store
 .idea
+venv
+.egg
+.egg-info

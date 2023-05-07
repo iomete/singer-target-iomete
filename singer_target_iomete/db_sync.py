@@ -20,7 +20,7 @@ def validate_config(config):
 
     required_config_keys = [
         'host',
-        'account_number',
+        'workspace_id',
         'lakehouse',
         'user',
         'password',
@@ -213,14 +213,14 @@ class DbSync:
     def create_connection(self):
         """Open iomete connection"""
         host = self.connection_config['host']
-        account_number = self.connection_config['account_number']
+        workspace_id = self.connection_config['workspace_id']
         lakehouse = self.connection_config['lakehouse']
         user = self.connection_config['user']
         password = self.connection_config['password']
-        database = "default"
+        database = self.connection_config.get('database', 'default')
         return hive.connect(
             host=host,
-            account_number=account_number,
+            workspace_id=workspace_id,
             lakehouse=lakehouse,
             database=database,
             username=user,
@@ -437,8 +437,8 @@ class DbSync:
             (safe_column_name(name), column_clause_iceberg(name, properties_schema))
             for (name, properties_schema) in self.flatten_schema.items()
             if name.upper() in columns_dict
-            and columns_dict[name.upper()]['DATA_TYPE'].upper()
-            != column_type_iceberg(properties_schema).upper()
+               and columns_dict[name.upper()]['DATA_TYPE'].upper()
+               != column_type_iceberg(properties_schema).upper()
         ]
 
         for (column_name, column) in columns_to_replace:

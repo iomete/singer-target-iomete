@@ -37,7 +37,7 @@ class TestDBSync(unittest.TestCase):
         empty_config = {}
         minimal_config = {
             'host': "dummy-value",
-            'account_number': "dummy-value",
+            'workspace_id': "dummy-value",
             'lakehouse': "dummy-value",
             'user': "dummy-value",
             'password': "dummy-value",
@@ -112,7 +112,7 @@ class TestDBSync(unittest.TestCase):
         query_patch.return_value = [{'type': 'CSV'}]
         minimal_config = {
             'host': "dummy-value",
-            'account_number': "dummy-value",
+            'workspace_id': "dummy-value",
             'lakehouse': "dummy-value",
             'user': "dummy-value",
             'password': "dummy-value",

@@ -16,7 +16,7 @@ def get_db_config():
     # --------------------------------------------------------------------------
     # iomete instance
     config['host'] = os.environ.get('TARGET_IOMETE_HOST')
-    config['account_number'] = os.environ.get('TARGET_IOMETE_ACCOUNT_NUMBER')
+    config['workspace_id'] = os.environ.get('TARGET_IOMETE_WORKSPACE_ID')
     config['lakehouse'] = os.environ.get('TARGET_IOMETE_LAKEHOUSE')
     config['user'] = os.environ.get('TARGET_IOMETE_USER')
     config['password'] = os.environ.get('TARGET_IOMETE_PASSWORD')

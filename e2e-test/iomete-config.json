@@ -1,6 +1,6 @@
 {
-  "host": "eu-central-1.iomete.com",
-  "account_number": "0000000000000",
+  "host": "<cluster_id>.iomete.com",
+  "workspace_id": "abcde-123",
   "lakehouse": "lakehouse",
   "user": "username",
   "password": "password",

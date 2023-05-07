@@ -18,8 +18,8 @@ pip install ../
 4.1. Set environment variables. See example 
 
 ```shell
-TARGET_IOMETE_HOST=<iomete-account-number>
-TARGET_IOMETE_ACCOUNT_NUMBER=<iomete-account-number>
+TARGET_IOMETE_HOST=<iomete-host>
+TARGET_IOMETE_WORKSPACE_ID=<iomete-workspace-id>
 TARGET_IOMETE_LAKEHOUSE=<iomete-lakehouse>
 TARGET_IOMETE_USER=<iomete-user>
 TARGET_IOMETE_PASSWORD=<iomete-password>
