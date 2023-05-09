@@ -1,7 +1,8 @@
 .env
-sdist/
+dist/
 .DS_Store
 .idea
 venv
-.egg
-.egg-info
+*.egg-info
+build/
+.mysql
